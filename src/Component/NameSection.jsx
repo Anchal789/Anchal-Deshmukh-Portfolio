@@ -1,4 +1,5 @@
 import React from "react";
+import ProfileImage from "../Assets/Profile Image.png"
 
 const NameSection = () => {
   return (
@@ -6,7 +7,7 @@ const NameSection = () => {
       <div className="container px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <div className="flex justify-center">
           <img
-            src=""
+            src={ProfileImage}
             width={300}
             height={300}
             alt="John Doe"
@@ -14,7 +15,7 @@ const NameSection = () => {
           />
         </div>
         <div className="space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold">John Doe</h1>
+          <h1 className="text-4xl md:text-5xl font-bold">Anchal Deshmukh</h1>
           <p className="text-gray-400 text-lg">
             Experienced Software Engineer and Web Developer
           </p>
