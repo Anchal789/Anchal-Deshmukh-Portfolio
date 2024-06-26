@@ -1,43 +1,31 @@
-import React from 'react'
-import {Link} from "react-router-dom"
-import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
-import Button from '@mui/material/Button';
+import React from "react";
+import { Link } from "react-router-dom";
+import AvatarImage from "../Assets/Avatar.jpg";
 
 const Header = () => {
   return (
-    <header className="bg-gray-950 text-gray-50 py-4 px-6 md:px-10 flex items-center justify-between">
-        <Link href="#" className="flex items-center gap-2" prefetch={false}>
-          <SentimentSatisfiedAltIcon className="h-6 w-6" />
-          <span className="text-lg font-semibold">John Doe</span>
-        </Link>
-        <nav className="hidden md:flex items-center gap-6">
-          <Link href="#" className="hover:underline underline-offset-4" prefetch={false}>
-            Home
-          </Link>
-          <Link href="#" className="hover:underline underline-offset-4" prefetch={false}>
-            About
-          </Link>
-          <Link href="#" className="hover:underline underline-offset-4" prefetch={false}>
-            Skills
-          </Link>
-          <Link href="#" className="hover:underline underline-offset-4" prefetch={false}>
-            Experience
-          </Link>
-          <Link href="#" className="hover:underline underline-offset-4" prefetch={false}>
-            Projects
-          </Link>
-          <Link href="#" className="hover:underline underline-offset-4" prefetch={false}>
-            Certifications
-          </Link>
-          <Link href="#" className="hover:underline underline-offset-4" prefetch={false}>
-            Contact
-          </Link>
-        </nav>
-        <Button size="sm" className="hidden md:inline-flex">
-          Resume
-        </Button>
+    <aside className="lg:w-24 md:w-24 border border-black min-h-screen h-screen text-white fixed sm:w-full lsm:w-full lsm:min-h-10 xs:w-full">
+      <header>
+        <div className="bg-white shadow">
+          <div className="py-5 lsm:py-2 px-2 flex flex-col lsm:flex-row xs:flex-row">
+            <div className="flex justify-end">
+              <img src={AvatarImage} className="rounded-full w-full lsm:w-16 xs:w-16" alt="" />
+            </div>
+            <div className="flex items-center justify-end w-[50%]">
+              <div>
+                <Link
+                  to="/"
+                  className="text-gray-700 font-bold text-md hover:text-blue-500"
+                >
+                  Home
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </header>
-  )
-}
+    </aside>
+  );
+};
 
-export default Header
+export default Header;
